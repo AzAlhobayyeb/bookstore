@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">bookstore</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="blackcoffee_price">$49</string>
+    <string name="blackcoffee">Black Coffee</string>
+    <string name="animal_farm_price">$23</string>
+    <string name="animal_farm">Animal Farm</string>
+    <string name="gotbook">GOT</string>
+    <string name="gotbook_price">$94</string>
+    <string name="murder_price">$35</string>
+    <string name="murder">the murder of roger ackroyd</string>
+    <string name="sciences_price">$62</string>
+    <string name="sciences">Popular Science</string>
+
+</resources>
