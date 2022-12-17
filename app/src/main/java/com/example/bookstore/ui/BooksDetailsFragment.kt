@@ -1,5 +1,6 @@
 package com.example.bookstore.ui
 
+import android.content.Intent
 import android.media.Image
 import android.net.Uri
 import android.os.Bundle
@@ -8,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import com.example.bookstore.R
@@ -50,14 +52,16 @@ class BooksDetailsFragment : Fragment() {
         var bName :TextView=view.findViewById(R.id.ndname)
         var bPrice :TextView=view.findViewById(R.id.ndprice)
         var bImage: ImageView =view.findViewById(R.id.ndimage)
-        var searchButton:Button =view.findViewById(R.id.ndbutton)
 
         bName.text = bookName
         bPrice.text = bookPrice
         bImage.setImageResource(imagepath)
 
+        var searchButton:ImageButton =view.findViewById(R.id.ndbutton)
         searchButton.setOnClickListener{
-            var queryUri:Uri=Uri.parse("${SEARCH_PREFIX}${bookName}")
+            var queryUri:Uri=Uri.parse("${SEARCH_PREFIX}${bookName} book")
+            var intent = Intent(Intent.ACTION_VIEW, queryUri)
+            context?.startActivity(intent)
         }
     }
 }
